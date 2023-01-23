@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:padding="4dp" >
+
+    <TextView
+        android:id="@+id/custom_post_tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:text="" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_post_tv_date"
+        android:layout_centerHorizontal="true"
+        app:columnCount="3"
+        app:rowCount="4">
+
+        <ImageView
+            android:id="@+id/custom_post_tv_img_profile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_columnWeight="1"
+            app:layout_rowSpan="3"
+            app:layout_rowWeight="1"
+            tools:srcCompat="@drawable/boss"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/custom_post_tv_following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/following"
+            android:drawablePadding="8dp"
+            android:text="@string/custom_post_following"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/custom_post_tv_following_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+
+        <TextView
+            android:id="@+id/custom_post_tv_posts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/posts"
+            android:drawablePadding="8dp"
+            android:text="@string/custom_post_posts"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/custom_post_tv_posts_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+
+        <TextView
+            android:id="@+id/custom_post_tv_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/followers"
+            android:drawablePadding="8dp"
+            android:text="@string/custom_post_followers"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/custom_post_tv_followers_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/custom_post_btn_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/custom_post_follow"
+            android:textColor="@color/white"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/custom_post_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text=""
+            android:textStyle="bold"
+            app:layout_columnSpan="2"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/custom_post_tv_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grid"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="#E91E63"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_post_tv_body"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/custom_post_btn_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableStart="@drawable/like"
+            android:padding="4dp"
+            android:text="@string/custom_post_like"
+            android:textAllCaps="false"
+            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/custom_post_btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableStart="@drawable/following"
+            android:padding="4dp"
+            android:text="@string/custom_post_share"
+            android:textAllCaps="false"
+            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/custom_post_btn_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableStart="@drawable/followers"
+            android:padding="4dp"
+            android:text="@string/custom_post_comment"
+            android:textAllCaps="false"
+            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Project</string>
+
+    <string name="areas_rectangle_width_hint">width</string>
+    <string name="areas_rectangle_hieght_hint">hieght</string>
+    <string name="areas_circle_radius_hint">Radius</string>
+    <string name="areas_triangle_base_hint">Base</string>
+    <string name="areas_triangle_hieght_hint">hieght</string>
+    <string name="areas_calculate_text">Calculate</string>
+
+
+    <string-array name="shapes">
+        <item>Select shape</item>
+        <item>Rectangle</item>
+        <item>Circle</item>
+        <item>Triangle</item>
+    </string-array>
+
+
+    <string name="custom_post_follow">Follow</string>
+    <string name="custom_post_following">Following</string>
+    <string name="custom_post_posts">Posts</string>
+    <string name="custom_post_followers">Followers</string>
+    <string name="custom_post_like">Like</string>
+    <string name="custom_post_share">Share</string>
+    <string name="custom_post_comment">Comment</string>
+
+    <string name="custom_add_name">Name</string>
+    <string name="custom_add_body">Body</string>
+    <string name="custom_add_date">Date</string>
+    <string name="custom_add_followers">Followers</string>
+    <string name="custom_add_posts">Posts</string>
+    <string name="custom_add_following">Following</string>
+    <string name="custom_add_btn_save">Save</string>
+    <string name="list_btn_add">Add</string>
+</resources>
