@@ -53,7 +53,7 @@
         android:inputType="text"
         android:padding="12dp"
         android:textSize="24sp"
-        tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+        tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize,DuplicateSpeakableTextCheck" />
 
     <EditText
         android:id="@+id/add_post_posts"
@@ -78,6 +78,13 @@
         android:padding="12dp"
         android:textSize="24sp"
         tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+
+    <ImageView
+        android:id="@+id/img_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/boss"
+        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/add_btn_save"

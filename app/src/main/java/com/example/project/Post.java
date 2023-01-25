@@ -10,7 +10,7 @@ public class Post implements Serializable {
     private int followers = 0;
     private int following = 0;
     private int posts = 0;
-   // private int img;
+    private int img = 0;
 
 
 
@@ -21,7 +21,7 @@ public class Post implements Serializable {
         this.followers = followers;
         this.following = following;
         this.posts = posts;
-       // this.img = img;
+        this.img = img;
 
     }
 
@@ -85,11 +85,10 @@ public class Post implements Serializable {
         this.posts = posts;
     }
 
-   // public int getImg() {
-    //    return img;
-    //}
+    public int getImg() {
+        return img;
+    }
 
-   // public void setImg(int img) {
-     //   this.img = img;
-   // }
+    public void setImg(int img) {
+        this.img = img; }
 }

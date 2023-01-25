@@ -51,17 +51,17 @@ public class PostAdapter extends BaseAdapter {
         TextView tv_followers = v.findViewById(R.id.custom_post_tv_followers_data);
         TextView tv_posts = v.findViewById(R.id.custom_post_tv_posts_data);
         TextView tv_body= v.findViewById(R.id.custom_post_tv_body);
-      //  ImageView img = v.findViewById(R.id.custom_post_tv_img_profile);
+        ImageView img = v.findViewById(R.id.custom_post_tv_img_profile);
 
         Post p = getItem(position);
 
        tv_date.setText(p.getDate());
         tv_name.setText(p.getName());
-        tv_body.setText(p.getDate());
+        tv_body.setText(p.getBody());
         tv_followers.setText(p.getFollowers()+"");
         tv_following.setText(p.getFollowing()+"");
         tv_posts.setText(p.getPosts()+"");
-      //  img.setImageResource(p.getImg());
+        img.setImageResource(p.getImg());
 
 
         return v;
