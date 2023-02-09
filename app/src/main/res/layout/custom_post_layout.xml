@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/custom_card_cornerRadius"
+    app:cardElevation="@dimen/custom_card_elevation"
+    app:cardUseCompatPadding="true">
 
-    android:padding="4dp" >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 
     <TextView
         android:id="@+id/custom_post_tv_date"
@@ -48,11 +56,17 @@
 
         <TextView
             android:id="@+id/custom_post_tv_following_data"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_margin="3dp"
+            android:background="@color/colorAccent"
             android:text=""
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
+            app:layout_rowWeight="1"
+            />
 
 
         <TextView
@@ -68,8 +82,13 @@
 
         <TextView
             android:id="@+id/custom_post_tv_posts_data"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_margin="3dp"
+            android:background="@color/colorAccent"
             android:text=""
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
@@ -88,97 +107,108 @@
 
         <TextView
             android:id="@+id/custom_post_tv_followers_data"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_margin="3dp"
+            android:background="@color/colorAccent"
             android:text=""
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/custom_post_btn_follow"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
             android:layout_marginTop="8dp"
             android:text="@string/custom_post_follow"
+            android:background="@color/colorAccent"
             android:textColor="@color/white"
+            android:textSize="15sp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
-
-            tools:ignore="HardcodedText,TextContrastCheck" />
+            tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/custom_post_tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="@color/white"
+            android:layout_marginStart="30dp"
             android:gravity="center"
             android:text=""
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_columnSpan="2"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
+         app:layout_rowWeight="1" />
 
-    </androidx.gridlayout.widget.GridLayout>
+</androidx.gridlayout.widget.GridLayout>
 
-    <TextView
-        android:id="@+id/custom_post_tv_body"
+<TextView
+    android:id="@+id/custom_post_tv_body"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/grid"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="12dp"
+    android:background="#E91E63"
+    android:gravity="center"
+    android:text=""
+    android:textColor="@color/white" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/custom_post_tv_body"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/custom_post_btn_like"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/grid"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="12dp"
-        android:background="#E91E63"
-        android:gravity="center"
-        android:text=""
-        android:textColor="@color/white" />
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:drawableStart="@drawable/like"
+        android:padding="4dp"
+        android:text="@string/custom_post_like"
+        android:textAllCaps="false"
+        tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/custom_post_btn_share"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/custom_post_tv_body"
-        android:orientation="horizontal">
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:drawableStart="@drawable/following"
+        android:padding="4dp"
+        android:text="@string/custom_post_share"
+        android:textAllCaps="false"
+        tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
 
-        <Button
-            android:id="@+id/custom_post_btn_like"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:drawableStart="@drawable/like"
-            android:padding="4dp"
-            android:text="@string/custom_post_like"
-            android:textAllCaps="false"
-            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
+    <Button
+        android:id="@+id/custom_post_btn_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:drawableStart="@drawable/followers"
+        android:padding="4dp"
+        android:text="@string/custom_post_comment"
+        android:textAllCaps="false"
+        tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
 
-        <Button
-            android:id="@+id/custom_post_btn_share"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:drawableStart="@drawable/following"
-            android:padding="4dp"
-            android:text="@string/custom_post_share"
-            android:textAllCaps="false"
-            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
+</LinearLayout>
 
-        <Button
-            android:id="@+id/custom_post_btn_comment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:drawableStart="@drawable/followers"
-            android:padding="4dp"
-            android:text="@string/custom_post_comment"
-            android:textAllCaps="false"
-            tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
-
-    </LinearLayout>
 </RelativeLayout>
+</androidx.cardview.widget.CardView>

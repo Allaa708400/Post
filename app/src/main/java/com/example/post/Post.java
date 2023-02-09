@@ -1,20 +1,20 @@
-package com.example.project;
+package com.example.post;
 
 import java.io.Serializable;
 
 public class Post implements Serializable {
+    private int id;
+    private String date;
+    private String name;
+    private String body;
+    private int followers;
+    private int following;
+    private int posts;
+    private String img;
 
-    private String date = "";
-    private String name = "";
-    private String body = "";
-    private int followers = 0;
-    private int following = 0;
-    private int posts = 0;
-    private int img = 0;
 
-
-
-    public Post(String date, String name, String body, int followers, int following, int posts,int img) {
+    public Post(int id, String date, String name, String body, int followers, int following, int posts, String img) {
+        this.id = id;
         this.date = date;
         this.name = name;
         this.body = body;
@@ -22,20 +22,8 @@ public class Post implements Serializable {
         this.following = following;
         this.posts = posts;
         this.img = img;
-
     }
 
-    public Post(String date, String name, String body, int followers, int following, int posts) {
-        this.date = date;
-        this.name = name;
-        this.body = body;
-        this.followers = followers;
-        this.following = following;
-        this.posts = posts;
-
-
-
-    }
 
     public String getDate() {
         return date;
@@ -85,10 +73,18 @@ public class Post implements Serializable {
         this.posts = posts;
     }
 
-    public int getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(int img) {
-        this.img = img; }
+    public void setImg(String img) {this.img = img;}
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 }

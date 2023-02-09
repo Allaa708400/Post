@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.project'
+    namespace 'com.example.post'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.project"
+        applicationId "com.example.post"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -26,6 +26,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    sourceSets {
+        main {
+            assets {
+                srcDirs 'src/main/assets'
+            }
+        }
+    }
 }
 
 dependencies {
@@ -37,4 +44,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
 }

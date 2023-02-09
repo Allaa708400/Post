@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Project</string>
-
-    <string name="areas_rectangle_width_hint">العرض</string>
-    <string name="areas_rectangle_hieght_hint">الطول</string>
-    <string name="areas_circle_radius_hint">نصف القطر</string>
-    <string name="areas_triangle_base_hint">القاعده</string>
-    <string name="areas_triangle_hieght_hint">الارتفاع</string>
-    <string name="areas_calculate_text">حساب</string>
-
-    <string-array name="shapes">
-        <item>اختر شكل</item>
-        <item>مستطيل</item>
-        <item>دائره</item>
-        <item>مثلث</item>
-    </string-array>
+    <string name="app_name">Post</string>
 
 
 
+    <string name="custom_add_name">الاسم</string>
+    <string name="custom_add_body">النص</string>
     <string name="custom_post_follow">متابعة</string>
+    <string name="custom_post_date">التاريخ</string>
     <string name="custom_post_following">المتابعين</string>
     <string name="custom_post_posts">المنشورات</string>
     <string name="custom_post_followers">المتابعين</string>
@@ -26,12 +15,7 @@
     <string name="custom_post_share">مشاركة</string>
     <string name="custom_post_comment">تعليق</string>
 
-    <string name="custom_add_name">الاسم</string>
-    <string name="custom_add_body">النص</string>
-    <string name="custom_add_date">التاريخ</string>
-    <string name="custom_add_followers">المتابعين</string>
-    <string name="custom_add_posts">المنشورات</string>
-    <string name="custom_add_following">المتابعين</string>
-    <string name="custom_add_btn_save">حفظ</string>
-    <string name="list_btn_add">اضافه</string>
+
+
+
 </resources>
